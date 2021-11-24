@@ -1,0 +1,7 @@
+import numpy as np
+'''
+Ini adalah kome multiline
+semoga bisa
+'''
+def x(a,b,c):
+    return (a+b+c)
