@@ -1,4 +1,11 @@
-w = float(input("Masukkan nilai float : "))
-x = int(input("Masukkan nilai integer : "))
-y = input("Masukkan string : ")
-z = str(input("Masukkan string : "))
+for i in x:
+    print(i)
+
+for j in range(10):
+    print("Saya Satpol")
+
+for k in range(10,-1,-1):
+    print(k)
+
+for l in "UwU":
+    print(l)

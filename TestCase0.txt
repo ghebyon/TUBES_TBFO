@@ -1,2 +1,8 @@
-with open('example.txt', 'w') as my_file:
-    my_file.write('Hello world!')
+print("Hello world!")
+print("Kami dari kelompok APA")
+print("Dari Kelas K", 2)
+
+w = float(input("Masukkan nilai float : "))
+x = int(input("Masukkan nilai integer : "))
+y = input("Masukkan string : ")
+z = str(input("Masukkan string : "))

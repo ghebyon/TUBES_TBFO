@@ -7,6 +7,7 @@ if len(sys.argv) > 1:
     fn = str(sys.argv[1])
     start = timeit.default_timer()
     tokenCode = token.createToken(fn)
+    #print(tokenCode)
     table = CYK.CYK(tokenCode)
     if (CYK.isSyntaxValid(table, "S")):
         print("\nAccepted")

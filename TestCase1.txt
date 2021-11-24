@@ -1,15 +1,11 @@
-import numpy as np
-# ini adalah komen single line \n
-''' Ini adalah komen multiline
-Semoga bisa yaoloh '''
-""" Ini juga komen multiline
-Semoga bisa lagi yaoloh """ 
 if (a == b):
     i += 1
-
     print("a dan b kok bisa sama")
 elif (a > b):
     j += 2
     print("a kok bisa lebih besar dari b")
 else:
     print("hah... kok ga bisa dibandingkan?")
+
+if not False:
+    raise AssertionError(message)

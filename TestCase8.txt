@@ -1,0 +1,10 @@
+# Ini adalah comment dengan single line \n
+''' Ini adalah comment dengan multi line
+Apakah bisa?
+Tentu saja bisa
+'''
+""" Ini juga comment dengan multi line
+Ya Tuhan semoga bisa
+Ah berserah sudah kami """
+
+print("Sekian dan Teriman kasih")

@@ -1,7 +1,4 @@
-for i in range(10):
-    print(i)
-    print("Succes" )
-
-for j in range(10,-1,-1):
-    print(j)
-    print("Succes")
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age

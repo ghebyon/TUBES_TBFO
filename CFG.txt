@@ -1,5 +1,5 @@
 Terminals:
-++ -- : ' " ''' """ += -= *= /= variable # , float integer string None input print ( ) str int double = + - * / ** // % len with open as content True False and or not is > < == >= <= != range if elif else for in while def class import from raise break pass continue return
+: ' " ''' """ += -= *= /= variable # , float integer string None input print ( ) str int double = + - * / ** // % len with open as content True False and or not is > < == >= <= != range if elif else for in while def class import from raise break pass continue return
 Variables:
 S ASSIGNMENT VAL VAR SVAL INPUT PRINT IF ELIF ELSE FOR WHILE DEF CLASS IMPORT CONTENT BINOP UNOP METHOD STRING CONTENT BOOL INBRACKET TYPE COMPARATION EXPRES RANGE RETURN RAISE FROM IF2 ELIF2 ELSE2 EXPRES2 SDEF CALLFUNCTION
 Productions:
@@ -34,7 +34,7 @@ METHOD -> with open INBRACKET as VAR | with open INBRACKET as VAR :;
 CONTENT -> ''' content ''' | """ content """ | # content;
 BOOL -> True | False | BOOL BOOL | BOOL and BOOL | BOOL or BOOL | not BOOL | SVAL COMPARATION SVAL | SVAL is SVAL;
 COMPARATION -> > | < | == | != | <= | >=;
-EXPRES -> ( BOOL ) : S | BOOL : S | BOOL : | ( BOOL ) :;
+EXPRES -> ( BOOL ) : S | BOOL : S | BOOL : | ( BOOL ) : | ( BOOL ) : BREAK | BOOL : BREAK;
 EXPRES2 -> ( BOOL ) : S | BOOL : S | BOOL : | ( BOOL ) : | ( BOOL ) : S RETURN | BOOL : S RETURN | ( BOOL ) : RETURN | BOOL : RETURN;
 RANGE -> range INBRACKET;
 IF -> if EXPRES | IF ELIF | IF ELSE | IF RAISE | IF BREAK | IF PASS | IF CONTINUE; 
@@ -43,7 +43,7 @@ ELIF -> elif EXPRES | ELIF ELIF | ELIF ELSE;
 ELIF2 -> elif EXPRES2 | ELIF2 ELIF2 | ELIF2 ELSE2; 
 ELSE -> else : S;
 ELSE2 -> else : S | else : S RETURN | else : RETURN;
-FOR -> for VAR in RANGE : S | for VAR in INBRACKET : S| for VAR in VAR : S | for VAR in STRING : S; 
+FOR -> for VAR in RANGE : S | for VAR in INBRACKET : S | for VAR in VAR : S | for VAR in STRING : S; 
 WHILE -> while EXPRES | while INBRACKET :;
 DEF -> def VAR INBRACKET : | DEF SDEF;
 SDEF -> S | SDEF SDEF | IF2 | RETURN;

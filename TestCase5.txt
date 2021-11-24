@@ -1,0 +1,13 @@
+def persentase (total, jumlah):
+    if (total >= 0 and total <= jumlah):
+        return total / jumlah * 100
+    return False
+
+def daftarMenu():
+    print('''
+    1. Ayam Goreng
+    2. Ayam Madu
+    3. Ayam ga ada rasa
+    4. Ayam ga ada otak
+    5. Bebek terkucilkan
+    ''')
