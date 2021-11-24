@@ -1,5 +1,3 @@
-# Sumber : https://github.com/adelmassimo/CFG2CNF
-
 # -*- coding: utf-8 -*-
 #IT's assumed that starting variable is the first typed
 import sys, helper
@@ -7,7 +5,10 @@ import sys, helper
 left, right = 0, 1
 
 K, V, Productions = [],[],[]
-variablesJar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z"]
+variablesJar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z",
+"A1", "B1", "C1", "D1", "E1", "F1", "G1", "H1", "I1", "J1", "K1", "L1", "M1", "N1", "O1", "P1", "Q1", "R1", "S1", "T1", "U1", "W1", "X1", "Y1", "Z1",
+"A2", "B2", "C2", "D2", "E2", "F2", "G2", "H2", "I2", "J2", "K2", "L2", "M2", "N2", "O2", "P2", "Q2", "R2", "S2", "T2", "U2", "W2", "X2", "Y2", "Z2",
+"A3", "B3", "C3", "D3", "E3", "F3", "G3", "H3", "I3", "J3", "K3", "L3", "M3", "N3", "O3", "P3", "Q3", "R3", "S3", "T3", "U3", "W3", "X3", "Y3", "Z3"]
 
 
 def isUnitary(rule, variables):
@@ -126,12 +127,21 @@ def UNIT(productions, variables):
 		i+=1
 	return result
 
+global CNF
+CNF = {}
+
+def convertToMap (Production):
+	for i in range (len(Production)):
+		s = ''
+		for j in range (len(Productions[i][1])):
+			s = s + Productions[i][1][j]
+		CNF.update({s : Productions[i][0]})
 
 if __name__ == '__main__':
 	if len(sys.argv) > 1:
 		modelPath = str(sys.argv[1])
 	else:
-		modelPath = 'model.txt'
+		modelPath = 'cfg.txt'
 	
 	K, V, Productions = helper.loadModel( modelPath )
 
@@ -140,8 +150,9 @@ if __name__ == '__main__':
 	Productions = BIN(Productions, variables=V)
 	Productions = DEL(Productions)
 	Productions = UNIT(Productions, variables=V)
-	
+	print(Productions)
+	convertToMap(Productions)
+	print(CNF)
 	print( helper.prettyForm(Productions) )
 	print( len(Productions) )
-	open('out.txt', 'w').write(	helper.prettyForm(Productions) )
-
+	open('cnf.txt', 'w').write(	helper.prettyForm(Productions) )
