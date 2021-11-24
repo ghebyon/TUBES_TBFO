@@ -141,7 +141,7 @@ if __name__ == '__main__':
 	if len(sys.argv) > 1:
 		modelPath = str(sys.argv[1])
 	else:
-		modelPath = 'cfg.txt'
+		modelPath = 'CFG.txt'
 	
 	K, V, Productions = helper.loadModel( modelPath )
 
@@ -150,9 +150,9 @@ if __name__ == '__main__':
 	Productions = BIN(Productions, variables=V)
 	Productions = DEL(Productions)
 	Productions = UNIT(Productions, variables=V)
-	print(Productions)
-	convertToMap(Productions)
-	print(CNF)
-	print( helper.prettyForm(Productions) )
-	print( len(Productions) )
-	open('cnf.txt', 'w').write(	helper.prettyForm(Productions) )
+	#print(Productions)
+	#convertToMap(Productions)
+	#print(CNF)
+	#print( helper.prettyForm(Productions) )
+	#print( len(Productions) )
+	open('CNF.txt', 'w').write(	helper.prettyForm(Productions) )

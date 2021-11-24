@@ -1,38 +1,4 @@
-print("PROGRAM KALKULATOR SEDERHANA") #Tampilan
-
-print("""
-============================================
-| Operasi yang tersedia :                  | 
-| +  : tambah                              |
-| -  : kurang                              |
-| *  : kali                                |
-| /  : bagi                                |
-| // : floor (bagi dan pembulatan kebawah) |
-| %  : modulo (sisa bagi)                  |
-============================================
-""") #Tampilan
-
-x       = float(input("Masukkan angka pertama : ")) #input nilai float ke variabel x
-operasi = str(input("Pilih Operasi          : "))   #input string ke variabel operasi
-y       = float(input("Masukkan angka kedua   : ")) #input nilai float ke variabel y
-
-if (operasi == "+" ):                    #jika input operasi adalah +, maka
-    print(26*"-", "(+)")                     #Tampilan
-    print(x, "+", y, "=", x + y)             #Tampilan dan hasil operasi penjumlahan
-elif (operasi == "-" ):                  #jika input operasi adalah -, maka
-    print(26*"-", "(-)")                     #Tampilan
-    print(x, "-", y, "=", x - y)             #Tampilan dan hasil operasi pengurangan
-elif (operasi == "*" ):                  #jika input operasi adalah *, maka
-    print(26*"-", "(*)")                     #Tampilan
-    print(x, "*", y, "=", x * y)             #Tampilan dan hasil operasi perkalian
-elif (operasi == "/" ):                  #jika input operasi adalah /, maka
-    print(26*"-", "(/)")                     #Tampilan
-    print(x, "/", y, "=", x / y)             #Tampilan dan hasil operasi pembagian
-elif (operasi == "//" ):                 #jika input operasi adalah //, maka
-    print(26*"-", "(//)")                    #Tampilan
-    print(x, "//", y, "=", x // y)           #Tampilan dan hasil operasi floor
-elif (operasi == "%" ):                  #jika input operasi adalah %, maka
-    print(26*"-", "(%)")                     #Tampilan
-    print(x, "%", y, "=", x % y)             #Tampilan dan hasil operasi modulo
-else:                                    #jika input operasi yang lain
-    print("\nOperasi tidak dikenal...\n")    #Tampilan
+w = float(input("Masukkan nilai float : "))
+x = int(input("Masukkan nilai integer : "))
+y = input("Masukkan string : ")
+z = str(input("Masukkan string : "))

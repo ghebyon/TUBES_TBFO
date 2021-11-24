@@ -1,0 +1,7 @@
+for i in range(10):
+    print(i)
+    print("Succes" )
+
+for j in range(10,-1,-1):
+    print(j)
+    print("Succes")

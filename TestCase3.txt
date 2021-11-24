@@ -1,0 +1,38 @@
+print("PROGRAM KALKULATOR SEDERHANA")
+
+print(
+"""
+============================================
+| Operasi yang tersedia :                  | 
+| +  : tambah                              |
+| -  : kurang                              |
+| *  : kali                                |
+| /  : bagi                                |
+| // : floor (bagi dan pembulatan kebawah) |
+| %  : modulo (sisa bagi)                  |
+============================================
+""")
+x       = float(input("Masukkan angka pertama : ")) 
+operasi = str(input("Pilih Operasi          : "))
+y       = float(input("Masukkan angka kedua   : "))
+
+if (operasi == "+" ):                   
+    print(26*"-", "(+)")                   
+    print(x, "+", y, "=", x + y)                 
+elif (operasi == "-" ):      
+    print(26*'-', '(-)')                     
+    print(x, '-', y, '=', x - y)        
+elif (operasi == "*" ):
+    print(26*"-", "(*)")
+    print(x, "*", y, "=", x * y)
+elif (operasi == "/" ):
+    print(26*"-", "(/)")
+    print(x, "/", y, "=", x / y)
+elif (operasi == "//" ):
+    print(26*"-", "(//)")
+    print(x, "//", y, "=", x // y)
+elif (operasi == "%" ):
+    print(26*"-", "(%)")
+    print(x, "%", y, "=", x % y)
+else:
+    print("\nOperasi tidak dikenal...\n")    

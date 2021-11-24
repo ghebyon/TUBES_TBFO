@@ -1,3 +1,5 @@
+from createToken import *
+
 global cnfList
 cnfList = []
 
@@ -34,7 +36,7 @@ def combine(a,b):
     return l
 
 def CYK(token):
-    LoadCNF("cnf.txt")
+    LoadCNF("CNF.txt")
     cykTable= [[[] for i in range(j)]for j in range(len(token),-1,-1)]
     k = 1
     for i in range(len(token)):
@@ -67,6 +69,7 @@ def CYK(token):
             cykTable[i][j] = set(cykTable[i][j])
 
     # Menampilkan seluruh elemen cykTable
+    #print("\nThis is CYK Table : ")
     #for i in (cykTable):
     #    print(i)
     return cykTable
@@ -78,10 +81,3 @@ def isSyntaxValid(table, startState):
         if (i == startState):
             return True
     return False
-
-#test
-table = CYK("aabaaa")
-if (isSyntaxValid(table, 'S')):
-    print("Compile Success")
-else:
-    print("Compile error")
