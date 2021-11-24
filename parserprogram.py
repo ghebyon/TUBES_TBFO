@@ -9,11 +9,11 @@ if len(sys.argv) > 1:
     tokenCode = token.createToken(fn)
     table = CYK.CYK(tokenCode)
     if (CYK.isSyntaxValid(table, "S")):
-        print("\nCompile success!")
+        print("\nAccepted")
     else:
-        print("\nCompile error!")
+        print("\nSyntax error!")
     stop = timeit.default_timer()
     print('Time Execution: ', stop - start, 'sec\n') 
 else:
 	print("\nInput file name")
-	print("\t run command : python parserprogram.py <file_name>\n")
+	print("\trun command : python parserprogram.py <file_name>\n")
