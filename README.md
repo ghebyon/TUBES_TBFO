@@ -34,15 +34,6 @@ Pada tugas besar ini, diimplementasikan compiler untuk Python untuk statement-st
 
 Syntax python yang didukung :
 <div align="center">
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:gray;border-style:solid;border-width:1px;font-family:"Courier New", sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:gray;border-style:solid;border-width:1px;font-family:"Courier New", sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:gray;text-align:center;vertical-align:top}
-.tg .tg-3ib7{border-color:gray;font-family:"Courier New", Courier, monospace !important;;text-align:center;vertical-align:top}
-</style>
 <table class="tg">
 <thead><tr><th class="tg-0lax">True</th><th class="tg-0lax">False</th><th class="tg-0lax">from</th><th class="tg-0lax">import</th><th class="tg-0lax">as</th></tr></thead>
 <tbody>
